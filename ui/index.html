@@ -29,15 +29,15 @@
         <div class="form-group">
           <label class="col-sm-4 control-label">所在地</label>
           <div class="col-sm-4">
-            <div class="col-sm-3">
+            <div class="col-sm-4">
               <select class="form-control" id="province">
               </select>
             </div>
-            <div class="col-sm-3">
+            <div class="col-sm-4">
               <select class="form-control" id="city">
               </select>
             </div>
-            <div class="col-sm-3">
+            <div class="col-sm-4">
               <select class="form-control" id="county">
               </select>
             </div>
@@ -164,24 +164,31 @@
       </div>
        <form class="form-horizontal " method="get">
         <div class="form-group">
-          <label class="col-sm-4 control-label">ip:</label>
-          <div class="col-sm-3">
+          <label class="col-sm-4 control-label">ip</label>
+          <div class="col-sm-2">
             <input type="text" class="form-control" id='ip'>
           </div>
-          <label class="col-sm-1 control-label">端口:</label>
-          <div class="col-sm-1">
+          <label class="col-sm-1 control-label">端口</label>
+          <div class="col-sm-2">
             <input type="text" class="form-control" id='port'>
           </div>
         </div>
         <div class="form-group">
           <label class="col-sm-4 control-label">内容</label>
           <div class="col-sm-5">
-            <input type="text" class="form-control" id='content'>
+            <textarea type="text" class="form-control" id='content'rows="4"></textarea>
           </div>
         </div>
          <div class="form-group">
           <label class="col-sm-4 control-label"></label>
           <div class="col-sm-5">
+            <div class="form-group">
+              <label for="port">字符集</label>
+              <select class="form-control" id="charset">
+                <option>UTF-8</option>
+                <option>GBK</option>
+              </select> 
+            </div>
             <button type="button" class="btn btn-success" onclick="sendTcp();">发送</button>
             <button type="button" class="btn btn-info" onclick="sendTcp();">重发</button>
           </div>
@@ -189,8 +196,9 @@
         <div class="form-group">
           <label class="col-sm-4 control-label">响应</label>
           <div class="col-sm-5">
-            <input type="text" class="form-control" id='response'>
+            <textarea type="text" class="form-control" id='response' rows="5"></textarea>
           </div>
+        </div>
       </form>
     </div>
   </div>
