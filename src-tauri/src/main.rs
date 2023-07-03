@@ -1,4 +1,3 @@
-// Prevents additional console window on Windows in release, DO NOT REMOVE!!
 #![cfg_attr(not(debug_assertions), windows_subsystem = "windows")]
 use std::io::prelude::*;
 use std::net::TcpStream;
@@ -25,7 +24,6 @@ fn send_tcp(ip: String, port: i32, content: &str, charset:&str) -> String {
     }
     let mut buffer = [0; 1024];
     stream.read(&mut buffer).unwrap();
-    // let response = String::from_utf8_lossy(&buffer[..]);
     if charset == "GBK" {
         let response = GBK.decode(&buffer, encoding::DecoderTrap::Ignore).unwrap();
         return response;
