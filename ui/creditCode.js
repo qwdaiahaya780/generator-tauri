@@ -347,6 +347,9 @@ function generatorCreditCode(){
   if (C18 == 31) {
       C18 = '0';
   }
+  if (C18 == 30) {
+   C18 = 'Y';
+}
    $("#creditCode").val(code+getMapR(C18.toString()));   
 }
 
